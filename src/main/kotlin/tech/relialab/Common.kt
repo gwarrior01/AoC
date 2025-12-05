@@ -29,7 +29,7 @@ fun mergeRanges(ranges: List<LongRange>): List<LongRange>  {
     acc.add(sorted.first())
     for (range in sorted) {
         val prev = acc.last()
-        if (max(prev.first(), range.first()) <= min(prev.last(), prev.last())) {
+        if (max(prev.first(), range.first()) <= min(prev.last(), range.last())) {
             acc[acc.lastIndex] = LongRange(
                 min(prev.first(), range.first()),
                 max(prev.last(), range.last())
