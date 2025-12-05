@@ -1,16 +1,13 @@
 package tech.relialab.y2025.day2
 
-import java.nio.file.Files
-import java.nio.file.Path
+import tech.relialab.readInput
 
 fun main() {
     var sum1 = 0L
     var sum2 = 0L
-    val list = Files.lines(
-        Path.of("/Users/great_warrior/IdeaProjects/AoC/src/main/resources/y2025/day2/input")
-    ).toList()
+    val input = readInput("y2025/day2")
 
-    list.first().split(",").forEach {
+    input.first().split(",").forEach {
         val ranges = it.split("-")
         for (curr in ranges.first().toLong()..ranges.last().toLong()) {
             if (repeatedTwice(curr.toString())) {

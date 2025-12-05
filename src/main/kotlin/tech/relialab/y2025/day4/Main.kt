@@ -3,7 +3,7 @@ package tech.relialab.y2025.day4
 import tech.relialab.grid
 
 fun main() {
-    val grid = grid("/Users/great_warrior/IdeaProjects/AoC/src/main/resources/y2025/day4/input")
+    val grid = grid("y2025/day4")
     println("Part1: ${part1(grid)}")
     println("Part1: ${part2(grid)}")
 }
